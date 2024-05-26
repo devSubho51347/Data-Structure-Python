@@ -8,7 +8,6 @@ def sumExists(arr, N, sum):
     dict = {}
 
     count = 0
-
     for ele in arr:
         dict[ele] = ele
 
@@ -19,9 +18,9 @@ def sumExists(arr, N, sum):
             print(j)
             count = count + 1
 
-
     if count > 0:
         return 1
     return 0
 
-sumExists([61 ,14 ,75 ,71 ,36 ,34 ,12], 7,68)
+
+sumExists([61, 14, 75, 71, 36, 34, 12], 7, 68)
