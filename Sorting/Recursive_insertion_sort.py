@@ -1,0 +1,40 @@
+#### Function for recursive insertion sort
+
+def recursive_insertion_sort(arr,end):
+    if end  == len(arr):
+        return arr
+    
+    def insert_element(arr,end):
+        key = arr[end]
+        
+        j = end - 1
+        
+        while (j >= 0) and (arr[j] > key):
+            arr[j+1] = arr[j]
+            j = j - 1
+        
+        arr[j + 1] = key
+        
+        print("End is", end, arr, key)
+        
+        return arr
+    
+    sorted_sub_array = insert_element(arr,end)
+    end = end + 1
+    
+    return recursive_insertion_sort(sorted_sub_array,end)    
+        
+
+
+
+### Here goes your input
+
+print("Enter the no of elements in your list")
+
+n = int(input())
+
+li = [int(input()) for i in range(n)]
+
+print("Unsorted array", li)
+
+print(recursive_insertion_sort(li,1))

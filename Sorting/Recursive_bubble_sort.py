@@ -1,5 +1,8 @@
 ## Solved it on my own in first attempt
 
+# Time Complexity O(n^2)
+#Space Complexity O(n)
+
 def recursive_bubble_sort(arr, k):
     if len(arr) == k:
         return arr
