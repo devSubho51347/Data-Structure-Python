@@ -1,6 +1,8 @@
 # Problem Statement - Leetcode - https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 
 
+### Solution with 2 binary search
+
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         start  = 0 
