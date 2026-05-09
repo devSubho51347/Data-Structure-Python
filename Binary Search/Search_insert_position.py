@@ -1,5 +1,3 @@
-# Leetcode problem - https://leetcode.com/problems/search-insert-position/
-
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         if target <= nums[0]:
@@ -29,4 +27,13 @@ class Solution:
                 start = mid + 1
             if nums[mid] > target:
                 end = mid - 1
-        return start        
+        if nums[mid] < target:
+            return mid + 1
+        return mid            
+
+
+
+
+
+
+        
