@@ -48,6 +48,36 @@ class Solution:
                 pass
         return False        
     
-#### For solution using sliding window - Use a combination of hashset and sliding window
+#### For solution using sliding window - Use a combination of array and sliding window
 
-    
+class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+
+        start = 0
+        end = 1
+        my_dic = {}
+
+        while end < len(nums):
+            
+            
+            
+            if end - start < k:
+                my_dict[nums[end]] = my_dict.get(nums[end],[])+ [end]
+                
+                if len(my_dict[nums[end]]) > 1:
+                    return True
+                
+                end = end + 1
+            else:
+                my_dict[nums[start]].pop[0] 
+                start = start + 1
+                
+                my_dict[nums[end]] = my_dict.get(nums[end],[])+ [end]
+                
+                if len(my_dict[nums[end]]) > 1:
+                    return True
+                
+                end = end + 1
+                
+        return False           
+             
