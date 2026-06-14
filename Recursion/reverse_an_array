@@ -1,0 +1,13 @@
+def reverse(li,i,j):
+    if i >= j:
+        return li
+    
+    print(i), print(j)
+    li[i], li[j-1] = li[j-1],li[i]
+    # print(li)
+    
+    return reverse(li,i+1,j-1)
+
+li = [1,2,3,4,5]    
+print(reverse(li,0, len(li)))    
+    
