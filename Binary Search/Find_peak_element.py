@@ -1,0 +1,27 @@
+class Solution:   
+    def peakElement(self, arr):
+        
+        
+        if len(arr) == 1:
+            return 0
+            
+        if arr[0] > arr[1]:
+            return 0
+        
+        if arr[-1] > arr[-2]:
+            return len(arr) - 1
+            
+        start = 1
+        end = len(arr) - 2
+        
+        while start <= end:
+            mid = (start + end)//2
+            
+            if (arr[mid] > arr[mid + 1]) and (arr[mid] > arr[mid  - 1]):
+                return mid
+                
+            elif arr[mid] > arr[mid + 1]:
+                end = mid - 1
+            
+            else:
+                start = mid + 1
