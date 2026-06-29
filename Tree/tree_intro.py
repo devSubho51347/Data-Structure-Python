@@ -6,6 +6,7 @@ class Tree:
         self.left = None
         self.right = None
 
+#### Preorder traversal
 
 def print_tree(root):
     if root is None:
