@@ -7,6 +7,8 @@ class Node:
         self.prev = None
 """
 
+#### Logic is to create an additional pointer and at a time work on a single node.
+
 class Solution:
     def reverse(self, head):
         # code here
